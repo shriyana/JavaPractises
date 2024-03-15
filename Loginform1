@@ -1,0 +1,56 @@
+public class Loginform implements ActionListener{//}, keylisterner{
+JLabel lblUsername, lbpassword,lblResult;
+JTextField textUsername;
+JPasswordField textpassword;
+JButton btnLogin, btnReset;
+Jpanel p;
+JFrame f;
+
+
+public Loginform(){
+    // initialize components and container 
+    lblUsername = new JLabel("user name");
+    lblpassword = new JLabel("password");
+    lblResult = new JLabel();
+
+    textUsername = new JTextField(15);
+    textpassword = new JLabel();
+
+    btnLogin = new JButton("Login");
+    btnReset = new JButton("Reset");
+
+    // register the buttons for click event 
+    btnLogin.addActionListener(this);
+    btnLogin.addActionListener(this);
+
+    f = JFrame("Loginform.....");
+    p = Jpanel();
+
+
+    
+    // add the components  into container.
+    p.add(lblUsername);
+    p.add(textpassword);
+   
+
+
+    p.add(lblpassword);
+    p.add(textpassword);
+    p.add(chksaved);
+    p.add(cmbzone);
+    p.add(lstDistrict);
+
+
+    p.add(btnLogin);
+    p.add(btnReset);
+    p.add(btnReset);
+    f.add(p);
+
+
+    // settitle("jmc Login form");
+    f.setSize(300, 400);
+    f.setVisible(true);
+    //setDefaultCloseoperation(jFrame.Exit_On_CLOSE)
+
+}
+

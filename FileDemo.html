@@ -1,0 +1,40 @@
+FileDemo.java
+import java.io.*;
+
+public class FileDemo{
+
+    public static void main(String[]args){
+
+        try{
+                FileWriter fw = new FileWriter("myfile.txt", false);  // file stream opened
+                String msg = "Welcome to BICT 5th Sem";
+                //char c = 'w';
+
+                fw.write(msg, 0, msg.length());
+                //fw.write(string str,int,off,int len)
+                //for (int i = 0; i < msg.length(); i++) {
+                   // fw.write(msg.charAt(i));
+                    //}
+                    fw.close();  //file stream closed
+                    System.out.println("Successfully Written");
+                
+
+           /*/ File obj = new File("myfile.txt");
+            if (obj.createNewFile()) {
+                   System.out.println("File created:  " + obj.getPath());
+
+            }
+            else {
+                System.out.println("File already exists: " + obj.getName());
+            } 
+            */
+            
+        }
+        catch(IOException e) {
+            System.err.println("An error has occured." + e.getMessage());
+            //e.printStackTrace();
+        }
+             // File obj = new File("bict_java.txt");
+             // System.out.println("File Created!");
+    }
+}
